@@ -4,14 +4,14 @@ export default function Contact() {
     return (
         <section
             id="contact"
-            className="relative bg-yale-blue-950 pt-32 pb-12 px-4 overflow-hidden"
+            className="relative bg-yale-blue-950 py-32 px-4 overflow-hidden"
         >
-            {/* Background Gradient Orbs (Subtle) */}
+            {/* Background Orbs */}
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-cerulean-900/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-honey-900/10 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto max-w-6xl relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* LEFT SIDE: Text & Info */}
                     <div className="flex flex-col justify-center">
                         <motion.h2
@@ -164,44 +164,7 @@ export default function Contact() {
                     </motion.div>
                 </div>
 
-                {/* BOTTOM FOOTER */}
-                <div className="border-t border-yale-blue-900 pt-12">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                        {/* Logo Text */}
-                        <div className="text-2xl font-bold text-cream-50 tracking-wide">
-                            Vantaris
-                            <span className="text-amber-honey-500">.Lab</span>
-                        </div>
-
-                        {/* Copyright */}
-                        <p className="text-yale-blue-400 text-sm">
-                            &copy; {new Date().getFullYear()} Vantaris Lab. All
-                            rights reserved.
-                        </p>
-
-                        {/* Social Links */}
-                        <div className="flex gap-6">
-                            {["Instagram", "LinkedIn", "GitHub"].map(
-                                (social) => (
-                                    <a
-                                        key={social}
-                                        href="#"
-                                        className="text-yale-blue-300 hover:text-cream-50 text-sm font-medium transition-colors"
-                                    >
-                                        {social}
-                                    </a>
-                                ),
-                            )}
-                        </div>
-                    </div>
-
-                    {/* BIG WATERMARK TEXT */}
-                    <div className="mt-20 flex justify-center opacity-5 select-none pointer-events-none">
-                        <h1 className="text-[12vw] md:text-[15vw] font-black text-transparent bg-clip-text bg-gradient-to-b from-cream-50 to-transparent leading-none">
-                            VANTARIS
-                        </h1>
-                    </div>
-                </div>
+                {/* NOTE: Footer bagian bawah sudah dipindah ke Component Footer.jsx */}
             </div>
         </section>
     );
