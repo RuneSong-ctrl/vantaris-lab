@@ -6,8 +6,8 @@ import Projects from "@/Components/Projects";
 import Contact from "@/Components/Contact";
 import Footer from "@/Components/Footer";
 
-export default function Welcome() {
-    return ( 
+export default function Welcome({ projects }) {
+    return (
         <>
             <Head title="Vantaris Lab - Digital Solutions" />
 
@@ -17,7 +17,9 @@ export default function Welcome() {
                 <main>
                     <Hero />
                     <Services />
-                    <Projects />
+
+                    <Projects data={projects} />
+
                     <Contact />
                     <Footer />
                 </main>

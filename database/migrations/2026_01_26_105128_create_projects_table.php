@@ -13,17 +13,20 @@ return new class extends Migration
 {
     Schema::create('projects', function (Blueprint $table) {
         $table->id();
-        $table->string('title'); 
-        $table->string('slug')->unique(); 
+        $table->string('title');
+        $table->string('slug')->unique();
         $table->string('category'); 
-        $table->text('description')->nullable();
         $table->string('thumbnail')->nullable();
-        $table->string('url')->nullable(); 
-        $table->boolean('is_featured')->default(false); 
+        
+     
+        $table->json('tech_stack')->nullable(); 
+        
+        $table->text('description')->nullable();
+        $table->string('url')->nullable();
+        $table->boolean('is_featured')->default(true);
         $table->timestamps();
     });
 }
-
     /**
      * Reverse the migrations.
      */
